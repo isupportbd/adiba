@@ -85,7 +85,7 @@ export default async function ProfileEditPage() {
               <label htmlFor="featuredAlt" className="field-label">
                 প্রধান ছবির বর্ণনা (alt)
               </label>
-              <input id="featuredAlt" name="featuredAlt" className="field" placeholder="যেমন: জানালার পাশে হাসছে মিষ্টি" />
+              <input id="featuredAlt" name="featuredAlt" className="field" placeholder="যেমন: জানালার পাশে হাসছে আদিবা" />
             </div>
           </div>
         </fieldset>

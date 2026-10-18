@@ -30,8 +30,8 @@ if (!url) {
 
 const ADMIN_EMAIL = (process.env.SEED_ADMIN_EMAIL || "family@example.com").toLowerCase();
 const ADMIN_PASSWORD = process.env.SEED_ADMIN_PASSWORD || "change-me-before-going-live";
-const CHILD_NAME = process.env.SEED_CHILD_NAME || "আয়িশা রহমান";
-const CHILD_NICKNAME = process.env.SEED_CHILD_NICKNAME || "মিষ্টি";
+const CHILD_NAME = process.env.SEED_CHILD_NAME || "আদিবা রহমান";
+const CHILD_NICKNAME = process.env.SEED_CHILD_NICKNAME || "আদিবা";
 
 const id = () => crypto.randomUUID();
 const img = (n, alt) => ({
@@ -42,16 +42,16 @@ const img = (n, alt) => ({
 const VIDEO = {
   kind: "video",
   key: "local:/images/sample/video-poster.svg",
-  alt: "নমুনা ভিডিও — প্রথম কথা বলার মুহূর্ত",
+  alt: "নমুনা ভিডিও — আদিবার প্রথম কথা বলার মুহূর্ত",
   caption: "🎬 নমুনা ভিডিও — পরিবার কক্ষে আসল ভিডিও যোগ করলে এখানে চলবে",
 };
 
 const MEDIA = {
-  sun: img(1, "জানালা দিয়ে ঢুকে পড়া সকালের রোদে মিষ্টির মুখ"),
-  stars: img(2, "রাতের আকাশের নিচে ঘুমপাড়ানো গান শুনছে মিষ্টি"),
-  flowers: img(3, "বারান্দার ফুলের গাছের সামনে দাঁড়িয়ে আছে মিষ্টি"),
-  moon: img(4, "চাঁদের আলোয় বিকেল কাটাচ্ছে মিষ্টি"),
-  rainbow: img(5, "রংধনুর নিচে হাতে হাত ধরে হাঁটছে মা আর মিষ্টি"),
+  sun: img(1, "জানালা দিয়ে ঢুকে পড়া সকালের রোদে আদিবার মুখ"),
+  stars: img(2, "রাতের আকাশের নিচে ঘুমপাড়ানো গান শুনছে আদিবা"),
+  flowers: img(3, "বারান্দার ফুলের গাছের সামনে দাঁড়িয়ে আছে আদিবা"),
+  moon: img(4, "চাঁদের আলোয় বিকেল কাটাচ্ছে আদিবা"),
+  rainbow: img(5, "রংধনুর নিচে হাতে হাত ধরে হাঁটছে মা আর আদিবা"),
   hills: img(6, "সবুজ পাহাড়ের সামনে প্রথম ভ্রমণের ছবি"),
   video: VIDEO,
 };
@@ -101,13 +101,13 @@ async function main() {
       await client.query(
         `INSERT INTO child_profile (id, display_name, nickname, bio, parents_message, family_lines,
                                     birth_date, birth_time, birth_weight_kg, birth_height_cm, featured_media_id)
-         VALUES ($1,$2,$3,$4,$5,$6,'2024-03-12','06:42',3.2,49.5,$7)`,
+         VALUES ($1,$2,$3,$4,$5,$6,'2026-02-02','06:42',3.2,49.5,$7)`,
         [
           id(),
           CHILD_NAME,
           CHILD_NICKNAME,
-          "আমাদের ছোট্ট মিষ্টি — হাসিখুশি ভরা, সব কিছুতেই আগ্রহী। সকালের আলো আর গোছা গানের মতো সে।",
-          "প্রিয় মিষ্টি,\nতোমার হাসিতেই আমাদের সারা জীবনের আলো। প্রতিটি দিন তোমাসঙ্গে কাটানো মুহূর্ত আমাদের সবচেয়ে দামি সম্পদ।\n\nভালোবাসায়,\nমা ও বাবা",
+          "আমাদের ছোট্ট আদিবা — হাসিখুশি ভরা, সব কিছুতেই আগ্রহী। সকালের আলো আর গোছা গানের মতো সে।",
+          "প্রিয় আদিবা,\nতোমার হাসিতেই আমাদের সারা জীবনের আলো। প্রতিটি দিন তোমার সঙ্গে কাটানো মুহূর্ত আমাদের সবচেয়ে দামি সম্পদ।\n\nভালোবাসায়,\nমা ও বাবা",
           ["মা — রুবিনা রহমান", "বাবা — তানভীর আহমেদ", "দাদি — শিরিন সুলতানা", "দাদা — আবদুল করিম"],
           featuredId,
         ],

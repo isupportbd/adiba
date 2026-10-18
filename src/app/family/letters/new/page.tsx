@@ -15,7 +15,7 @@ export default function NewLetterPage() {
       </p>
       <h2 className="mb-2 text-xl font-semibold">💌 {t("family.addLetter")}</h2>
       <p className="mb-6 text-sm text-ink-500">
-        চিঠিগুলো ডিফল্টে 🔒 নিজস্ব থাকে — মিষ্টি বড় হয়ে পড়বে।
+        চিঠিগুলো ডিফল্টে 🔒 নিজস্ব থাকে — আদিবা বড় হয়ে পড়বে।
       </p>
 
       <form action={createLetter} className="space-y-5">
@@ -53,7 +53,7 @@ export default function NewLetterPage() {
           <label htmlFor="body" className="field-label">
             চিঠির লেখা *
           </label>
-          <textarea id="body" name="body" rows={10} required className="field" placeholder="প্রিয় মিষ্টি, …" />
+          <textarea id="body" name="body" rows={10} required className="field" placeholder="প্রিয় আদিবা, …" />
         </div>
 
         <label className="flex items-center gap-2 text-sm font-medium text-ink-700">

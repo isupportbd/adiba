@@ -75,7 +75,7 @@ export default function NewMemoryPage() {
                 id="altText"
                 name="altText"
                 className="field"
-                placeholder="যেমন: বারান্দায় বৃষ্টির জল ধরছে মিষ্টি"
+                placeholder="যেমন: বারান্দায় বৃষ্টির জল ধরছে আদিবা"
               />
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
