@@ -62,6 +62,35 @@ async function main() {
       }
     }
     console.log("[migrate] all migrations applied.");
+
+    // Auto-create/sync admin account from environment variables if provided
+    const adminEmail = (process.env.SEED_ADMIN_EMAIL || process.env.ADMIN_EMAIL || "").trim().toLowerCase();
+    const adminPassword = process.env.SEED_ADMIN_PASSWORD || process.env.ADMIN_PASSWORD;
+
+    if (adminEmail && adminPassword) {
+      console.log(`[migrate] checking admin user: ${adminEmail}`);
+      const bcryptModule = await import("bcryptjs");
+      const bcrypt = bcryptModule.default || bcryptModule;
+      const crypto = await import("node:crypto");
+
+      const existing = await client.query("SELECT id FROM users WHERE LOWER(email) = $1", [adminEmail]);
+      const passwordHash = await bcrypt.hash(adminPassword, 10);
+
+      if (existing.rowCount === 0) {
+        const userId = crypto.randomUUID();
+        await client.query(
+          `INSERT INTO users (id, name, email, password_hash, role) VALUES ($1, $2, $3, $4, 'parent')`,
+          [userId, "Admin", adminEmail, passwordHash],
+        );
+        console.log(`[migrate] ✓ Admin user created successfully (${adminEmail})`);
+      } else {
+        await client.query(
+          `UPDATE users SET password_hash = $1, role = 'parent' WHERE LOWER(email) = $2`,
+          [passwordHash, adminEmail],
+        );
+        console.log(`[migrate] ✓ Admin user updated/synchronized (${adminEmail})`);
+      }
+    }
   } finally {
     await client.end();
   }

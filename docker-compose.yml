@@ -84,6 +84,8 @@ services:
       MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
       MINIO_BUCKET: ${MINIO_BUCKET:-adiba-media}
       MAX_UPLOAD_MB: ${MAX_UPLOAD_MB:-200}
+      SEED_ADMIN_EMAIL: ${SEED_ADMIN_EMAIL:-}
+      SEED_ADMIN_PASSWORD: ${SEED_ADMIN_PASSWORD:-}
     # If your proxy/Coolify expects plain HTTP on 3000, no ports are needed;
     # uncomment for direct access during setup:
     # ports:
