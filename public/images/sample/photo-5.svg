@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" role="img" aria-label="নমুনা ছবি">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FEF4F4"/>
+      <stop offset="1" stop-color="#ECE7F8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="750" fill="url(#g)"/>
+  <g fill="none" stroke-width="18" stroke-linecap="round" opacity="0.55">
+    <path d="M180 430 a320 320 0 0 1 640 0" stroke="#EFB3AF"/>
+    <path d="M230 430 a270 270 0 0 1 540 0" stroke="#DAD1F0"/>
+    <path d="M280 430 a220 220 0 0 1 440 0" stroke="#C5E7D5"/>
+  </g>
+  <g fill="#F7D0CE">
+    <circle cx="150" cy="180" r="10"/><circle cx="860" cy="150" r="12"/><circle cx="760" cy="250" r="7"/>
+  </g>
+  <path d="M0 630 q250 -90 520 -25 q240 55 480 -30 V750 H0z" fill="#FBE4E3"/>
+  <text x="500" y="690" text-anchor="middle" font-family="'Hind Siliguri','Nirmala UI',sans-serif" font-size="34" fill="#8069B4" opacity="0.9">নমুনা ছবি ৫</text>
+</svg>

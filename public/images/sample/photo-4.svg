@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" role="img" aria-label="নমুনা ছবি">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FAEBD9"/>
+      <stop offset="1" stop-color="#FDF6EC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="750" fill="url(#g)"/>
+  <path d="M700 120 a110 110 0 1 0 90 170 a86 86 0 1 1 -90 -170z" fill="#F3DDC3"/>
+  <g fill="#EFB3AF" opacity="0.9">
+    <circle cx="200" cy="180" r="8"/><circle cx="320" cy="120" r="6"/><circle cx="440" cy="200" r="7"/>
+    <circle cx="140" cy="320" r="6"/><circle cx="880" cy="420" r="8"/>
+  </g>
+  <path d="M0 600 q220 -80 480 -20 q280 60 520 -35 V750 H0z" fill="#F3DDC3"/>
+  <text x="500" y="690" text-anchor="middle" font-family="'Hind Siliguri','Nirmala UI',sans-serif" font-size="34" fill="#A85450" opacity="0.85">নমুনা ছবি ৪</text>
+</svg>

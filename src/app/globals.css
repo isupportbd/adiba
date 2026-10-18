@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ *
+ * আদিবার স্মৃতিখানা — global styles
+ * Soft cream canvas, generous whitespace, gentle shadows.
+ * ------------------------------------------------------------------ */
+
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-100 font-body text-ink-700 antialiased;
+    /* faint dotted texture, like album paper */
+    background-image: radial-gradient(rgba(191, 150, 150, 0.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-ink-900;
+  }
+
+  ::selection {
+    @apply bg-blush-100 text-ink-900;
+  }
+
+  /* Visible, gentle focus ring everywhere (keyboard accessibility). */
+  :focus-visible {
+    @apply outline-none ring-2 ring-blush-400 ring-offset-2 ring-offset-cream-100;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-card border border-cream-200 bg-white/90 shadow-soft;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors;
+  }
+
+  .btn-primary {
+    @apply btn bg-blush-300 text-ink-900 hover:bg-blush-200;
+  }
+
+  .btn-ghost {
+    @apply btn border border-cream-300 bg-white/70 text-ink-700 hover:bg-white;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-medium;
+  }
+
+  .chip-static {
+    @apply chip border-lavender-200 bg-lavender-50 text-lavender-700;
+  }
+
+  .chip-private {
+    @apply chip border-mint-200 bg-mint-50 text-mint-700;
+  }
+
+  .field {
+    @apply w-full rounded-2xl border border-cream-300 bg-white px-4 py-3 text-sm text-ink-900 shadow-sm placeholder:text-ink-300 focus:border-blush-300 focus:outline-none focus:ring-2 focus:ring-blush-200;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-sm font-semibold text-ink-700;
+  }
+
+  .section-title {
+    @apply font-display text-2xl font-semibold text-ink-900 sm:text-3xl;
+  }
+}
+
+/* Respect the user's motion preference — disable all animation & smooth scroll. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Lightbox overlay */
+.lightbox-backdrop {
+  @apply fixed inset-0 z-50 flex flex-col items-center justify-center bg-ink-900/90 p-4 backdrop-blur-sm;
+}

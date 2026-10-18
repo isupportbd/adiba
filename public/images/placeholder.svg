@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="ছবির জায়গা">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDF6EC"/>
+      <stop offset="1" stop-color="#FBE4E3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#g)"/>
+  <g transform="translate(400,430)">
+    <g fill="#F7D0CE">
+      <ellipse cx="0" cy="-70" rx="30" ry="70"/><ellipse cx="0" cy="70" rx="30" ry="70"/>
+      <ellipse cx="-70" cy="0" rx="70" ry="30"/><ellipse cx="70" cy="0" rx="70" ry="30"/>
+      <ellipse cx="-50" cy="-50" rx="55" ry="26" transform="rotate(45 -50 -50)"/>
+      <ellipse cx="50" cy="-50" rx="55" ry="26" transform="rotate(-45 50 -50)"/>
+      <ellipse cx="-50" cy="50" rx="55" ry="26" transform="rotate(-45 -50 50)"/>
+      <ellipse cx="50" cy="50" rx="55" ry="26" transform="rotate(45 50 50)"/>
+    </g>
+    <circle cx="0" cy="0" r="42" fill="#F3DDC3"/>
+    <circle cx="0" cy="0" r="20" fill="#EFB3AF"/>
+  </g>
+  <text x="400" y="700" text-anchor="middle" font-family="'Hind Siliguri','Nirmala UI',sans-serif" font-size="34" fill="#A85450" opacity="0.85">ছবির জায়গা</text>
+  <text x="400" y="750" text-anchor="middle" font-family="'Hind Siliguri','Nirmala UI',sans-serif" font-size="24" fill="#A85450" opacity="0.6">পরিবার কক্ষ থেকে ছবি যোগ করুন</text>
+</svg>

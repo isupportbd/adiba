@@ -1,0 +1,42 @@
+{
+  "name": "adiba-memory-book",
+  "version": "1.0.0",
+  "private": true,
+  "description": "আদিবার স্মৃতিখানা — A private, family-focused memory website for our daughter.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node migrate.mjs",
+    "db:push": "drizzle-kit push",
+    "db:seed": "node scripts/seed.mjs",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@auth/drizzle-adapter": "^1.11.3",
+    "@aws-sdk/client-s3": "^3.700.0",
+    "bcryptjs": "^2.4.3",
+    "drizzle-orm": "^0.36.4",
+    "next": "14.2.35",
+    "next-auth": "5.0.0-beta.32",
+    "pg": "^8.13.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sharp": "^0.33.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.17.6",
+    "@types/pg": "^8.11.10",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "drizzle-kit": "^0.28.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
+  }
+}
